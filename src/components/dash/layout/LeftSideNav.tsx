@@ -1,4 +1,4 @@
-import { BsFillPeopleFill, BsFillHouseFill } from 'react-icons/bs'
+import { BsSearch, BsFillHouseFill } from 'react-icons/bs'
 import { IconType } from 'react-icons'
 import { useRouter } from 'next/router'
 import { Link } from 'components/custom'
@@ -20,16 +20,16 @@ const LeftSideNav = ({
       icon: BsFillHouseFill
     },
     {
-      name: 'Suggestions',
-      path: '/dash/suggestions',
-      icon: BsFillPeopleFill
+      name: 'Search',
+      path: '/dash/search',
+      icon: BsSearch
     }
   ]
 }: props) => {
   const { pathname } = useRouter()
-  const [isLg] = useMediaQuery('(min-width: 1024px)')
+  const [isLg] = useMediaQuery('(min-width: 1280px)')
   //display={`${!isLg && 'none'}`}
-  const { dashLeftNavColor, bg } = useMyColors()
+  const { dashLeftNavColor, dashNavHeading } = useMyColors()
   // const Styles = {
   //   aside: 'hidden lg:flex row-span-full dark:bg-normal-light bg-primary flex-col p-2 rounded-r-2xl',
   //   logo: 'flex justify-center items-center p-2',
@@ -45,7 +45,7 @@ const LeftSideNav = ({
     <Flex as='aside' direction='column' gridRow='1 / -1' p='2' bg={dashLeftNavColor}>
       <Link to='/dash' display='flex' justifyContent='center' p='2'>
         {/* <Image src={logo} alt='logo' /> */}
-        <Heading size='lg' color={bg}>
+        <Heading size='lg' color={dashNavHeading}>
           GreenInvesting
         </Heading>
       </Link>

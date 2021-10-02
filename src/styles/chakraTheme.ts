@@ -122,7 +122,7 @@ const overrides: ThemeOverride = {
     useSystemColorMode: false
   },
   fonts: {
-    body: 'Alaska'
+    body: 'Roboto'
   },
   colors: {
     primary: {

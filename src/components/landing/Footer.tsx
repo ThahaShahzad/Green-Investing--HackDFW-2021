@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import { GiReceiveMoney } from 'react-icons/gi'
 import { Link } from 'components/custom'
 
 export type Props = {
@@ -37,7 +37,8 @@ const Footer: React.FC<Props> = ({ links, logo, socialLinks }) => {
       <div className={Styles.Content}>
         <div className={Styles.Row}>
           <div className={Styles.LogoContainer}>
-            <Image src={logo.logoImg} alt='logo' />
+            {/* <Image src={logo.logoImg} alt='logo' /> */}
+            <GiReceiveMoney className='w-8 h-8 text-[#57a99a]' />
             <h4 className={Styles.LogoText}>{logo.logoText}</h4>
           </div>
           <div className={Styles.LinksContainer}>
@@ -47,14 +48,14 @@ const Footer: React.FC<Props> = ({ links, logo, socialLinks }) => {
               </Link>
             ))}
           </div>
-          <div className={Styles.SocialLinksContainer}>
+          {/* <div className={Styles.SocialLinksContainer}>
             {socialLinks.map((socialLink, index) => (
               <a key={index} className={Styles.SocialLink} href={socialLink.linkHref} target='_blank' rel='noreferrer'>
                 <Image src={socialLink.linkIcon} alt='img' />
               </a>
             ))}
-          </div>
-          <p className={Styles.CopyrightText}>&copy; Copyright 2020, QuranTracker Inc. All Rights Reserved.</p>
+          </div> */}
+          <p className={Styles.CopyrightText}>&copy; Copyright 2021, GreenInvesting Inc. All Rights Reserved.</p>
         </div>
       </div>
     </div>

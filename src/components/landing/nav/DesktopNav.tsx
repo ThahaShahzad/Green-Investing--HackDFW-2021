@@ -1,5 +1,6 @@
 import { Link, Image } from 'components/custom'
 import { Heading, Button } from '@chakra-ui/react'
+import { GiReceiveMoney } from 'react-icons/gi'
 import { Fragment } from 'react'
 
 export type Props = {
@@ -26,7 +27,8 @@ const DesktopNav: React.FC<Props> = ({ logo, links }) => {
   return (
     <nav className={Styles.nav}>
       <Link className={Styles.logo} to='/landing'>
-        <Image src={logo.logoImg} alt='logo' />
+        {/* <Image src={logo.logoImg} alt='logo' /> */}
+        <GiReceiveMoney className='w-8 h-8 text-[#57a99a]' />
         <Heading size='lg' ml='2'>
           {logo.logoText}
         </Heading>
