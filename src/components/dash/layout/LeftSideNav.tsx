@@ -1,10 +1,8 @@
-import { BsFillPeopleFill, BsFillPersonFill, BsCheck, BsChatFill, BsFillHouseFill } from 'react-icons/bs'
+import { BsFillPeopleFill, BsFillHouseFill } from 'react-icons/bs'
 import { IconType } from 'react-icons'
 import { useRouter } from 'next/router'
-import Image from 'next/image'
 import { Link } from 'components/custom'
-import logo from 'public/images/QuranTrackerLogo.png'
-import { Flex, Icon, List, ListItem, Text, useMediaQuery } from '@chakra-ui/react'
+import { Flex, Icon, List, ListItem, Text, Heading, useMediaQuery } from '@chakra-ui/react'
 import { useMyColors } from 'styles/colors'
 
 interface props {
@@ -31,7 +29,7 @@ const LeftSideNav = ({
   const { pathname } = useRouter()
   const [isLg] = useMediaQuery('(min-width: 1024px)')
   //display={`${!isLg && 'none'}`}
-  const { dashLeftNavColor } = useMyColors()
+  const { dashLeftNavColor, bg } = useMyColors()
   // const Styles = {
   //   aside: 'hidden lg:flex row-span-full dark:bg-normal-light bg-primary flex-col p-2 rounded-r-2xl',
   //   logo: 'flex justify-center items-center p-2',
@@ -44,10 +42,12 @@ const LeftSideNav = ({
   // }
   //bg-gradient-to-bl from-[#D1EECC] to-[#57A99A]
   return (
-    <Flex as='aside' direction='column' gridRow='1 / -1' p='2' roundedRight='2xl' bg={dashLeftNavColor}>
-      <Link to='/' display='flex' justifyContent='center' p='2'>
-        <Image src={logo} alt='logo' />
-        {/* <p className={Styles.logoText}>QuranTracker</p> */}
+    <Flex as='aside' direction='column' gridRow='1 / -1' p='2' bg={dashLeftNavColor}>
+      <Link to='/dash' display='flex' justifyContent='center' p='2'>
+        {/* <Image src={logo} alt='logo' /> */}
+        <Heading size='lg' color={bg}>
+          GreenInvesting
+        </Heading>
       </Link>
       <List pl='0' mt='32' spacing={4}>
         {listItems.map((listItem) => (
@@ -61,8 +61,14 @@ const LeftSideNav = ({
               p={{ base: 4, '2xl': 3 }}
               px={{ xl: 2 }}
               py={{ xl: 2 }}
-              rounded={`${pathname === listItem.path && '3xl'}`}
-              border={`${pathname === listItem.path && '2px'}`}>
+              // color={`${pathname === listItem.path && 'green'}`}
+              _hover={{
+                translateY: 1,
+                transform: 'auto'
+              }}
+              rounded={`${pathname === listItem.path && 'xl'}`}
+              border={`${pathname === listItem.path && '2px'}`}
+              borderColor='primary.dark'>
               <Icon as={listItem.icon} w='20px' h='20px' />
 
               <Text display={{ base: 'none', xl: 'block' }}>{listItem.name}</Text>
