@@ -1,5 +1,5 @@
-import { BsFillShieldLockFill } from 'react-icons/bs'
-import { BiSupport, BiCustomize } from 'react-icons/bi'
+import { AiOutlineStock, AiFillDatabase } from 'react-icons/ai'
+import { FaEnvira } from 'react-icons/fa';
 import logoImg from './images/logo.svg'
 import DesignIllustration from './images/design-illustration.svg'
 import FacebookIcon from './images/facebook-icon.svg'
@@ -32,28 +32,28 @@ export const LandingPageDetails = {
   Features: {
     cards: [
       {
-        imageSrc: BsFillShieldLockFill,
-        title: 'Secure',
-        description: 'We strictly only deal with vendors that provide top notch security.',
+        imageSrc: AiOutlineStock,
+        title: 'Invest',
+        description: 'Place your money where you belive it can have the best impact',
         url: 'https://timerse.com'
       },
       {
-        imageSrc: BiSupport,
-        title: '24/7 Support',
-        description: 'Lorem ipsum donor amet siti ceali placeholder text',
+        imageSrc: FaEnvira,
+        title: 'Eco-Conscious',
+        description: 'We believe you should be able to invest wisely and support companies that meet your environmental vision',
         url: 'https://google.com'
       },
       {
-        imageSrc: BiCustomize,
-        title: 'Customizable',
-        description: 'Lorem ipsum donor amet siti ceali placeholder text',
+        imageSrc: AiFillDatabase,
+        title: 'Data',
+        description: 'Up to date information on the top companies on the market',
         url: 'https://reddit.com'
       }
     ],
-    heading: 'Amazing Features',
+    heading: 'Our Goals',
     subheading: '',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+      'From who you invest in to why. We provide insights to empower your investment choices.'
   },
   MainFeatures: {
     cards: [
