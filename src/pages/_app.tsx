@@ -3,7 +3,6 @@ import type { AppProps } from 'next/app'
 import React from 'react'
 import { NextPage } from 'next'
 import Chakra from './Chakra'
-import Fonts from 'styles/fonts'
 
 type Page<P = {}> = NextPage<P> & {
   getLayout?: any
@@ -20,7 +19,6 @@ function MyApp({ Component, pageProps }: Props) {
 
   return (
     <Chakra cookies={pageProps.cookies}>
-      <Fonts />
       <Layout>
         <Component {...pageProps} />
       </Layout>

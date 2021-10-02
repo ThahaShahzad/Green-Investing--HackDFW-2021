@@ -1,8 +1,8 @@
 import NLink from 'next/link'
-import { Link as ChakaraLink } from '@chakra-ui/react'
+import { Link as ChakaraLink, LinkProps } from '@chakra-ui/react'
 import { MouseEventHandler, ReactNode } from 'react'
 
-interface LinkProps {
+interface MyLinkProps extends LinkProps {
   to: any
   key?: any
   className?: string
@@ -12,7 +12,7 @@ interface LinkProps {
   onClick?: MouseEventHandler<HTMLAnchorElement> | undefined
 }
 
-export const Link: React.FC<LinkProps> = ({ to, key, className, children, size, variant, onClick, ...props }) => {
+export const Link: React.FC<MyLinkProps> = ({ to, key, className, children, size, variant, onClick, ...props }) => {
   return (
     <NLink href={to} key={key ?? to} passHref>
       <ChakaraLink className={className} size={size} variant={variant} onClick={onClick} {...props}>
