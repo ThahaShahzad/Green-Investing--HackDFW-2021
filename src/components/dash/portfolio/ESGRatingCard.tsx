@@ -5,9 +5,9 @@ import { useMyColors } from 'styles/colors'
 const ESGRatingCard = () => {
   const { RawBg } = useMyColors()
   const data01 = [
-    { name: 'Environmental Rating', color: 'bg-green-500' },
-    { name: 'Social Rating', color: 'bg-blue-500' },
-    { name: 'Governance Rating', color: 'bg-yellow-500' }
+    { name: 'Environmental Rating', color: 'bg-green-500' , value: 60 },
+    { name: 'Social Rating', color: 'bg-blue-500' , value: 30 },
+    { name: 'Governance Rating', color: 'bg-yellow-500' , value: 10 }
   ]
   const data01RC = [
     ['ESG', 'Catagories'],
@@ -39,19 +39,32 @@ const ESGRatingCard = () => {
             ]
           }}
         />
-        <div className=''>
+        <Box className='flex-col'>
           <Heading size='lg' mb='8'>
             Your ESG Rating
           </Heading>
-          <div className='flex flex-col gap-4 mt-4'>
+          <Box className='flex flex-col gap-4 mt-4'>
             {data01.map((investment) => (
               <div className='flex gap-4'>
                 <div className={`w-4 h-1 ${investment.color}`} />
-                <p>{investment.name}</p>
+                <div><p>{investment.name}</p></div>
               </div>
             ))}
-          </div>
-        </div>
+          </Box>
+        </Box>
+        <Box className='flex-col'>
+          <Heading size='lg' mb='8'>
+
+          </Heading>
+          <Box className='flex flex-row gap-4 mt-4'>
+            {data01.map((investment) => (
+              <div className='flex-col gap-4'>
+                <div className={`w-6 h-4 center`}><p>{investment.value}</p></div>
+                <div><p>{investment.name}</p></div>
+              </div>
+            ))}
+          </Box>
+        </Box>
       </Flex>
     </Box>
   )
