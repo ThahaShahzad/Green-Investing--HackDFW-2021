@@ -6,16 +6,16 @@ import { useMyColors } from 'styles/colors'
 
 const TopNav = () => {
   // const { user, error, isLoading } = useUser()
-  const { bgLight } = useMyColors()
+  const { dashLeftNavColor, bg } = useMyColors()
   const [isGreaterThenSm] = useMediaQuery('(min-width: 40em)')
 
   return (
-    <Flex as='nav' justify='space-between' borderBottom='2px' p={{ base: '2', lg: '4' }}>
+    <Flex as='nav' justify='space-between' p={{ base: '2', lg: '4' }} bg={dashLeftNavColor}>
       <Flex direction={{ base: 'column', lg: 'row' }} alignItems='center'>
-        <Heading as='h4' size='lg' marginRight={{ lg: '2' }}>
+        <Heading as='h4' size='md' color={bg} marginRight={{ lg: '2' }}>
           Welcome
         </Heading>
-        <Heading as='h4' size='lg'>
+        <Heading as='h4' size='md' color={bg}>
           {/* {user?.name?.includes('@') ? user.nickname : user?.name} */}
           Adam
         </Heading>
