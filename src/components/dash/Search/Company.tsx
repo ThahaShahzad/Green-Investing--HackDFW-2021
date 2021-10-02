@@ -72,7 +72,7 @@ const Company = ({ company }: props) => {
               </Heading>
               <div className='flex flex-col gap-4 mt-4'>
                 {data01.map((investment) => (
-                  <div className='flex gap-4 items-center'>
+                  <div key={investment.name} className='flex gap-4 items-center'>
                     <div className={`w-4 h-1 ${investment.color}`} />
                     <Text>{investment.name}</Text>
                   </div>

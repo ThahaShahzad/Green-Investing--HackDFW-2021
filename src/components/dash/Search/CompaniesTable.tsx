@@ -32,7 +32,7 @@ const CompaniesTable = () => {
         </Thead>
         <Tbody>
           {SortedESGData.map((company) => (
-            <Tr>
+            <Tr key={company.esg_id}>
               <Td>
                 <Link to={`/dash/search/${company.stock_symbol}`} textDecorationLine='underline'>
                   {company.company_name}
