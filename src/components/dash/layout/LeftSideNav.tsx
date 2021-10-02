@@ -20,8 +20,8 @@ const LeftSideNav = ({
       icon: BsFillHouseFill
     },
     {
-      name: 'Suggestions',
-      path: '/dash/suggestions',
+      name: 'Companies',
+      path: '/dash/companies',
       icon: BsFillPeopleFill
     }
   ]
