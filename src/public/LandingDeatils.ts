@@ -9,7 +9,7 @@ import YoutubeIcon from './images/youtube-icon.svg'
 export const LandingPageDetails = {
   Header: {
     logo: {
-      logoText: 'QuranTracker',
+      logoText: 'GreenInvesting',
       logoImg: logoImg
     },
     links: [
@@ -21,8 +21,8 @@ export const LandingPageDetails = {
     ]
   },
   Hero: {
-    heading: 'QuranTracker',
-    description: 'Track, manage, and enhance your Quran classes.',
+    heading: 'GreenInvesting',
+    description: 'Greenify your portfolio',
     primaryButtonText: 'Get Started',
     primaryButtonUrl: '/auth/login',
     watchVideoButtonText: 'Watch Video',
@@ -207,7 +207,7 @@ export const LandingPageDetails = {
       { linkIcon: YoutubeIcon, linkHref: 'https://youtube.com' }
     ],
     logo: {
-      logoText: 'QuranTracker',
+      logoText: 'GreenInvesting',
       logoImg: logoImg
     }
   }

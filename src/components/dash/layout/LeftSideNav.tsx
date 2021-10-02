@@ -1,82 +1,77 @@
+import { BsFillPeopleFill, BsFillPersonFill, BsCheck, BsChatFill, BsFillHouseFill } from 'react-icons/bs'
+import { IconType } from 'react-icons'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
-import { FiMenu } from 'react-icons/fi'
-import { Link } from 'components/custom/Link'
-import {
-  Button,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  Heading,
-  useDisclosure
-} from '@chakra-ui/react'
+import { Link } from 'components/custom'
+import logo from 'public/images/QuranTrackerLogo.png'
+import { Flex, Icon, List, ListItem, Text, useMediaQuery } from '@chakra-ui/react'
+import { useMyColors } from 'styles/colors'
 
-export type Props = {
-  logo: {
-    logoText: string
-    logoImg: any
-  }
-  links: {
-    linkText: string
-    linkRoute: string
-    primary?: boolean
-    secondary?: boolean
+interface props {
+  listItems?: {
+    name: string
+    path: string
+    icon: IconType
   }[]
 }
-
-const MobileNav: React.FC<Props> = ({ logo, links }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const Styles = {
-    nav: 'flex lg:hidden flex-1 justify-between items-center px-4 overflow-hidden',
-    sideNav: 'navShadow h-full w-2/3 fixed top-0 right-0 z-20 bg-primary py-8 px-4 rounded-l-2xl sm:w-1/3',
-    sideNavIconContainer: 'flex justify-end',
-    sideNavIcon: 'w-8 h-8',
-    logo: 'flex items-center ml-3',
-    logoText: 'ml-3 text-normal',
-    navLinks: 'flex flex-col items-start gap-4 h-full px-8 pb-8',
-    actionLink: 'mt-auto w-full text-center',
-    'close-nav': 'fixed top-0 left-0 bottom-0 z-20 w-1/3 bg-transparent px-4 sm:w-2/3'
-  }
+const LeftSideNav = ({
+  listItems = [
+    {
+      name: 'Portfolio',
+      path: '/dash',
+      icon: BsFillHouseFill
+    },
+    {
+      name: 'Suggestions',
+      path: '/dash/suggestions',
+      icon: BsFillPeopleFill
+    }
+  ]
+}: props) => {
+  const { pathname } = useRouter()
+  const [isLg] = useMediaQuery('(min-width: 1024px)')
+  //display={`${!isLg && 'none'}`}
+  const { dashLeftNavColor } = useMyColors()
+  // const Styles = {
+  //   aside: 'hidden lg:flex row-span-full dark:bg-normal-light bg-primary flex-col p-2 rounded-r-2xl',
+  //   logo: 'flex justify-center items-center p-2',
+  //   logoText: 'ml-2 hidden 2xl:block',
+  //   list: 'mt-32 flex flex-col gap-4',
+  //   listItem: 'rounded-3xl flex items-center justify-center xl:justify-start xl:gap-2 p-4 xl:px-2 xl:py-4 2xl:p-4',
+  //   listItemIcon: 'text-normal',
+  //   listItemText: 'text-normal',
+  //   listItemSelected: 'border-2 border-normal'
+  // }
+  //bg-gradient-to-bl from-[#D1EECC] to-[#57A99A]
   return (
-    <nav className={Styles.nav}>
-      <Link className={Styles.logo} to='/'>
-        <Image src={logo.logoImg} alt='logo' />
-        <Heading size='lg' ml='2'>
-          {logo.logoText}
-        </Heading>
+    <Flex as='aside' direction='column' gridRow='1 / -1' p='2' roundedRight='2xl' bg={dashLeftNavColor}>
+      <Link to='/' display='flex' justifyContent='center' p='2'>
+        <Image src={logo} alt='logo' />
+        {/* <p className={Styles.logoText}>QuranTracker</p> */}
       </Link>
-      {!isOpen && (
-        <div onClick={onOpen}>
-          <FiMenu />
-        </div>
-      )}
-      <Drawer isOpen={isOpen} placement='right' onClose={onClose}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader mb='8'></DrawerHeader>
-          <DrawerBody>
-            <div className={Styles.navLinks}>
-              {links.map((link, index) => (
-                <div key={index}>
-                  {link.primary ? null : link.secondary ? null : <Link to={link.linkRoute}>{link.linkText}</Link>}
-                </div>
-              ))}
-            </div>
-          </DrawerBody>
-          <DrawerFooter justifyContent='center' experimental_spaceX='4'>
-            <Button variant='outline' mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button>Save</Button>
-          </DrawerFooter>
-        </DrawerContent>
-      </Drawer>
-    </nav>
+      <List pl='0' mt='32' spacing={4}>
+        {listItems.map((listItem) => (
+          <ListItem key={listItem.name}>
+            <Link
+              to={listItem.path}
+              display='flex'
+              alignItems='center'
+              justifyContent={{ base: 'center', xl: 'start' }}
+              gridGap={{ xl: 2 }}
+              p={{ base: 4, '2xl': 3 }}
+              px={{ xl: 2 }}
+              py={{ xl: 2 }}
+              rounded={`${pathname === listItem.path && '3xl'}`}
+              border={`${pathname === listItem.path && '2px'}`}>
+              <Icon as={listItem.icon} w='20px' h='20px' />
+
+              <Text display={{ base: 'none', xl: 'block' }}>{listItem.name}</Text>
+            </Link>
+          </ListItem>
+        ))}
+      </List>
+    </Flex>
   )
 }
 
-export default MobileNav
+export default LeftSideNav
