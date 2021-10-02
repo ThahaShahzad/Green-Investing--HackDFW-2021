@@ -64,14 +64,14 @@ const TwoColumnWithVideo: React.FC<Props> = ({
                 <Link to={primaryButtonUrl}>{primaryButtonText}</Link>
               </div>
             </Button>
-            <Button size='lg' onClick={toggleModal}>
+            {/* <Button size='lg' onClick={toggleModal}>
               <div className='flex items-center gap-4'>
-                {/* <span className='playIconContainer'> */}
+                 <span className='playIconContainer'> 
                 <BsFillPlayFill className={Styles.WatchVideoButtonPlayIcon} />
-                {/* </span> */}
+                 </span> 
                 <span className={Styles.WatchVideoButtonPlayText}>{watchVideoButtonText}</span>
               </div>
-            </Button>
+            </Button> */}
           </div>
         </div>
         <div className={Styles.RightColumn}>

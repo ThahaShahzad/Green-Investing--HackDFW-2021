@@ -5,7 +5,7 @@ import MobileNav from './MobileNav'
 export type Props = {
   logo: {
     logoText: string
-    logoImg: string
+    logoImg: any
   }
   links: {
     linkText: string

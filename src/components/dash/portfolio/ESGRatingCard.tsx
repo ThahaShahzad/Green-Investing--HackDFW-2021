@@ -1,4 +1,4 @@
-import { Box, Flex, Heading } from '@chakra-ui/layout'
+import { Box, Flex, Heading, Text } from '@chakra-ui/layout'
 import Chart from 'react-google-charts'
 import { useMyColors } from 'styles/colors'
 
@@ -11,13 +11,13 @@ const ESGRatingCard = () => {
   ]
   const data01RC = [
     ['ESG', 'Catagories'],
-    ['Environmental Rating', 60],
-    ['Social Rating', 30],
-    ['Governance Rating', 10]
+    ['Environmental Rating', 500],
+    ['Social Rating', 400],
+    ['Governance Rating', 300]
   ]
   return (
     <Box rounded='3xl' boxShadow='2xl' mt='10' p='4'>
-      <Flex ml='2'>
+      <Flex ml='2' gridGap='8' align='center'>
         <Chart
           height={'100%'}
           chartType='PieChart'
@@ -25,6 +25,7 @@ const ESGRatingCard = () => {
           data={data01RC}
           options={{
             backgroundColor: RawBg,
+            width: 300,
             legend: { position: 'none' },
             slices: [
               {
@@ -39,30 +40,39 @@ const ESGRatingCard = () => {
             ]
           }}
         />
-        <Box className='flex-col'>
+   <Box>
           <Heading size='lg' mb='8'>
             Your ESG Rating
           </Heading>
-          <Box className='flex flex-col gap-4 mt-4'>
+          <div className='flex flex-col gap-4 mt-4'>
             {data01.map((investment) => (
-              <div className='flex gap-4'>
+              <div key={investment.name} className='flex gap-4 items-center'>
                 <div className={`w-4 h-1 ${investment.color}`} />
-                <div><p>{investment.name}</p></div>
+                <Text>{investment.name}</Text>
               </div>
             ))}
-          </Box>
+          </div>
         </Box>
-        <Box className='flex-col'>
-          <Heading size='lg' mb='8'>
-
-          </Heading>
-          <Box className='flex flex-row gap-4 mt-4'>
-            {data01.map((investment) => (
-              <div className='flex-col gap-4'>
-                <div className={`w-6 h-4 center`}><p>{investment.value}</p></div>
-                <div><p>{investment.name}</p></div>
-              </div>
-            ))}
+        <Box display='flex' gridGap='6' ml='60'>
+          <Box>
+            <Text>Environment</Text>
+            <Heading color='#10B981'>500</Heading>
+            <Text size='sm'>Average</Text>
+          </Box>
+          <Box>
+            <Text>Social</Text>
+            <Heading color='#3B82F6'>400</Heading>
+            <Text size='sm'>Average</Text>
+          </Box>
+          <Box>
+            <Text>Governance</Text>
+            <Heading color='#F59E0B'>300</Heading>
+            <Text size='sm'>Average</Text>
+          </Box>
+          <Box>
+            <Text>Total</Text>
+            <Heading color='gray'>1100</Heading>
+            <Text size='sm'>Average</Text>
           </Box>
         </Box>
       </Flex>

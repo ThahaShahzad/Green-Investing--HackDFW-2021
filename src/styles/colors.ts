@@ -8,6 +8,7 @@ export const useMyColors = () => {
   const bgLight = useColorModeValue('bg-light.light', 'bg-light.dark')
   const bgLightDark = useColorModeValue('bg-light.dark', 'bg-light.light')
   const dashLeftNavColor = useColorModeValue('primary.500', 'bg-light.dark')
+  const dashNavHeading = useColorModeValue('bg.light', 'primary.dark')
   const whiteBlackColor = useColorModeValue('white', 'black')
   const blackWhiteColor = useColorModeValue('black', 'white')
   const RawBg = useColorModeValue('#f3f8f7', '#0d1f23')
@@ -21,6 +22,7 @@ export const useMyColors = () => {
     bgLight,
     bgLightDark,
     dashLeftNavColor,
+    dashNavHeading,
     whiteBlackColor,
     blackWhiteColor
   }

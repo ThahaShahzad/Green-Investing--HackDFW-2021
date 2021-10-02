@@ -1,11 +1,11 @@
 import { AiOutlineStock, AiFillDatabase } from 'react-icons/ai'
-import { FaEnvira } from 'react-icons/fa';
-import logoImg from './images/logo.svg'
-import DesignIllustration from './images/design-illustration.svg'
+import { FaEnvira } from 'react-icons/fa'
+import logoImg from './images/GreenInvestLogo.jpg'
+import DesignIllustration from './images/hero-green.jpg'
 import FacebookIcon from './images/facebook-icon.svg'
 import TwitterIcon from './images/twitter-icon.svg'
 import YoutubeIcon from './images/youtube-icon.svg'
-
+//api/auth/signin
 export const LandingPageDetails = {
   Header: {
     logo: {
@@ -13,19 +13,19 @@ export const LandingPageDetails = {
       logoImg: logoImg
     },
     links: [
-      { linkText: 'About', linkRoute: '/landing/about' },
-      { linkText: 'Pricing', linkRoute: '/landing/pricing' },
-      { linkText: 'Contact Us', linkRoute: '/landing/contact-us' },
-      { linkText: 'Login', linkRoute: '/auth/signin', secondary: true },
-      { linkText: 'Sign Up', linkRoute: '/auth/signup', primary: true }
+      // { linkText: 'About', linkRoute: '/landing/about' },
+      // { linkText: 'Pricing', linkRoute: '/landing/pricing' },
+      // { linkText: 'Contact Us', linkRoute: '/landing/contact-us' },
+      // { linkText: 'Login', linkRoute: '/auth/signin', secondary: true },
+      { linkText: 'Get Started', linkRoute: '/dash', primary: true }
     ]
   },
   Hero: {
     heading: 'GreenInvesting',
     description: 'Greenify your portfolio',
-    primaryButtonText: 'Get Started',
+    primaryButtonText: 'Learn more',
     primaryButtonUrl: '/auth/login',
-    watchVideoButtonText: 'Watch Video',
+    watchVideoButtonText: 'Get Started',
     watchVideoYoutubeUrl: 'https://www.youtube.com/embed/_GuOjXYl5ew',
     imageSrc: DesignIllustration
   },
@@ -40,7 +40,8 @@ export const LandingPageDetails = {
       {
         imageSrc: FaEnvira,
         title: 'Eco-Conscious',
-        description: 'We believe you should be able to invest wisely and support companies that meet your environmental vision',
+        description:
+          'We believe you should be able to invest wisely and support companies that meet your environmental vision',
         url: 'https://google.com'
       },
       {
@@ -52,8 +53,7 @@ export const LandingPageDetails = {
     ],
     heading: 'Our Goals',
     subheading: '',
-    description:
-      'From who you invest in to why. We provide insights to empower your investment choices.'
+    description: 'From who you invest in to why. We provide insights to empower your investment choices.'
   },
   MainFeatures: {
     cards: [
@@ -195,11 +195,11 @@ export const LandingPageDetails = {
   },
   Footer: {
     links: [
-      { linkText: 'Home', linkRoute: '/landing' },
-      { linkText: 'About', linkRoute: '/landing/about' },
-      { linkText: 'Contact Us', linkRoute: '/landing/contact-us' },
-      { linkText: 'Privacy Policy', linkRoute: '/landing/privacy-policy' },
-      { linkText: 'Terms of Service', linkRoute: '/landing/terms-of-service' }
+      // { linkText: 'Home', linkRoute: '/' }
+      // { linkText: 'About', linkRoute: '/landing/about' },
+      // { linkText: 'Contact Us', linkRoute: '/landing/contact-us' },
+      // { linkText: 'Privacy Policy', linkRoute: '/landing/privacy-policy' },
+      // { linkText: 'Terms of Service', linkRoute: '/landing/terms-of-service' }
     ],
     socialLinks: [
       { linkIcon: FacebookIcon, linkHref: 'https://facebook.com' },
