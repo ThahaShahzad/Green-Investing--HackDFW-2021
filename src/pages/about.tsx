@@ -32,10 +32,10 @@ const About = () => {
           <Text>NextJS ChakraUI TailwindCSS TypeScript</Text>
           <Heading size='lg'>Challenges we ran into</Heading>
           <Text>
-            Data sets were hard to come by and there is limit access to free data from API's. We were able to pull some
-            data from the EsgEnterprise API in order to mock data for our demo in a JSON file.
+            Data sets were hard to come by and there is limit access to free data from API&apos;s. We were able to pull
+            some data from the EsgEnterprise API in order to mock data for our demo in a JSON file.
           </Text>
-          <Heading size='lg'>Accomplishments that we're proud of</Heading>
+          <Heading size='lg'>Accomplishments that we&apos;re proud of</Heading>
           <Text>
             Being able to get data to use for the site given the limited resources. Completing a working MVP prototype
             for the presentation deadline.
@@ -46,7 +46,7 @@ const About = () => {
             it on our website. Some of us learned more about using NextJS and the other technologies used for this
             project.
           </Text>
-          <Heading size='lg'>What's next for GreenInvesting</Heading>
+          <Heading size='lg'>What&apos;s next for GreenInvesting</Heading>
           <Text>
             Login functionality, Import user portfolios, more complex search of the datasets, larger datasets,
             suggestions for users based on preferences, and user education on companies green initiatives.

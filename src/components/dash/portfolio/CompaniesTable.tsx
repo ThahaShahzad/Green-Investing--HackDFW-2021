@@ -19,7 +19,7 @@ const CompaniesTable = () => {
         </Thead>
         <Tbody>
           {ESGData.map((company) => (
-            <Tr>
+            <Tr key={company.esg_id}>
               <Td>{company.company_name}</Td>
               <Td>{company.environment_score}</Td>
               <Td>{company.social_score}</Td>
