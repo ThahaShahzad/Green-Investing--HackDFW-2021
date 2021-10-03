@@ -5,9 +5,9 @@ import { useMyColors } from 'styles/colors'
 const ESGRatingCard = () => {
   const { RawBg } = useMyColors()
   const data01 = [
-    { name: 'Environmental Rating', color: 'bg-green-500' , value: 60 },
-    { name: 'Social Rating', color: 'bg-blue-500' , value: 30 },
-    { name: 'Governance Rating', color: 'bg-yellow-500' , value: 10 }
+    { name: 'Environmental Rating', color: 'bg-green-500', value: 60 },
+    { name: 'Social Rating', color: 'bg-blue-500', value: 30 },
+    { name: 'Governance Rating', color: 'bg-yellow-500', value: 10 }
   ]
   const data01RC = [
     ['ESG', 'Catagories'],
@@ -40,7 +40,7 @@ const ESGRatingCard = () => {
             ]
           }}
         />
-   <Box>
+        <Box>
           <Heading size='lg' mb='8'>
             Your ESG Rating
           </Heading>
@@ -53,7 +53,7 @@ const ESGRatingCard = () => {
             ))}
           </div>
         </Box>
-        <Box display='flex' gridGap='6' ml='60'>
+        <Box display='flex' gridGap='12' ml='40'>
           <Box>
             <Text>Environment</Text>
             <Heading color='#10B981'>500</Heading>

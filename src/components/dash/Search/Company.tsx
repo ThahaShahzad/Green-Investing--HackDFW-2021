@@ -44,7 +44,7 @@ const Company = ({ company }: props) => {
           {company?.company}
         </Heading>
         <Box rounded='3xl' boxShadow='2xl' mt='10' p='4'>
-          <Flex ml='2' align='center'>
+          <Flex ml='2' gridGap='8' align='center'>
             <Chart
               height={'100%'}
               chartType='PieChart'
@@ -80,7 +80,7 @@ const Company = ({ company }: props) => {
                 ))}
               </div>
             </Box>
-            <Box display='flex' gridGap='6' ml='60'>
+            <Box display='flex' gridGap='12' textAlign='center' ml='40'>
               <Box>
                 <Text>Environment</Text>
                 <Heading color='#10B981'>{company?.env_score}</Heading>

@@ -26,7 +26,7 @@ const DesktopNav: React.FC<Props> = ({ logo, links }) => {
   }
   return (
     <nav className={Styles.nav}>
-      <Link className={Styles.logo} to='/landing'>
+      <Link className={Styles.logo} to='/'>
         {/* <Image src={logo.logoImg} alt='logo' /> */}
         <GiReceiveMoney className='w-8 h-8 text-[#57a99a]' />
         <Heading size='lg' ml='2'>

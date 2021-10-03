@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import React from 'react'
 import { NextPage } from 'next'
 import Chakra from './Chakra'
+import AppWrapper from 'components/custom/AppWrapper'
 
 type Page<P = {}> = NextPage<P> & {
   getLayout?: any
@@ -19,9 +20,11 @@ function MyApp({ Component, pageProps }: Props) {
 
   return (
     <Chakra cookies={pageProps.cookies}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <AppWrapper>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </AppWrapper>
     </Chakra>
   )
 }

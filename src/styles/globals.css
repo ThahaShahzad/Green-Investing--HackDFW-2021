@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  /* Base */
+  @font-face {
+    font-family: Alaska;
+    src: url('./alaska.ttf') format('truetype');
+    font-display: swap;
+  }
+}
