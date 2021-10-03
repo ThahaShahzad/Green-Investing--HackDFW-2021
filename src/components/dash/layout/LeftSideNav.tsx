@@ -43,7 +43,7 @@ const LeftSideNav = ({
   //bg-gradient-to-bl from-[#D1EECC] to-[#57A99A]
   return (
     <Flex as='aside' direction='column' gridRow='1 / -1' p='2' bg={dashLeftNavColor}>
-      <Link to='/dash' display='flex' justifyContent='center' p='2'>
+      <Link to='/' display='flex' justifyContent='center' p='2'>
         {/* <Image src={logo} alt='logo' /> */}
         <Heading size='lg' color={dashNavHeading}>
           GreenInvesting

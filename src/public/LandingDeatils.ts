@@ -24,7 +24,7 @@ export const LandingPageDetails = {
     heading: 'GreenInvesting',
     description: 'Greenify your portfolio',
     primaryButtonText: 'Learn more',
-    primaryButtonUrl: '/auth/login',
+    primaryButtonUrl: '/about',
     watchVideoButtonText: 'Get Started',
     watchVideoYoutubeUrl: 'https://www.youtube.com/embed/_GuOjXYl5ew',
     imageSrc: DesignIllustration

@@ -1,4 +1,4 @@
-import esgJson from 'public/q1.json'
+import { ESGDataSet } from 'public/q1'
 
 export enum sortByEnum {
   ESG = 'esg',
@@ -7,11 +7,12 @@ export enum sortByEnum {
   GOV = 'gov'
 }
 export const getESGSort = (sortBy: sortByEnum) => {
-  let esgData = esgJson
+  let esgData = ESGDataSet
   if (sortBy === sortByEnum['ESG']) {
     esgData.sort((a, b) =>
       a.total < b.total ? 1 : a.total === b.total ? (a.environment_score < b.environment_score ? 1 : -1) : -1
     )
+    // esgData = esgJson
   } else if (sortBy === sortByEnum['ENV']) {
     esgData.sort((a, b) =>
       a.environment_score < b.environment_score

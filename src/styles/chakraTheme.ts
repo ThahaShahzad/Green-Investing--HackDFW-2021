@@ -25,10 +25,10 @@ const Text: ComponentStyleConfig = {
   // styles for different sizes ("sm", "md", "lg")
   sizes: {
     sm: {
-      fontSize: ['.5rem', '.75rem']
+      fontSize: ['.5rem', '1.25rem']
     },
     md: {
-      fontSize: ['1.125rem', '1.25rem'],
+      fontSize: ['1.125rem', '1.5rem'],
       fontWeight: 'normal'
     },
     lg: {
