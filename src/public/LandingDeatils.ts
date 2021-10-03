@@ -34,7 +34,7 @@ export const LandingPageDetails = {
       {
         imageSrc: AiOutlineStock,
         title: 'Invest',
-        description: 'Build your wealth in areas you belive it can have the best impact',
+        description: 'Build your wealth in areas you belive it will have the best impact',
         url: 'https://timerse.com'
       },
       {
@@ -51,9 +51,9 @@ export const LandingPageDetails = {
         url: 'https://reddit.com'
       }
     ],
-    heading: 'Our Goals',
+    heading: 'Our Goal',
     subheading: '',
-    description: 'From who you invest in to why. We provide insights to empower your investment choices.'
+    description: 'We provide insights to empower your investment choices.'
   },
   MainFeatures: {
     cards: [
