@@ -2,6 +2,7 @@ import { Link, Image } from 'components/custom'
 import { Heading, Button } from '@chakra-ui/react'
 import { GiReceiveMoney } from 'react-icons/gi'
 import { Fragment } from 'react'
+import ThemeToggler from 'components/custom/ThemeToggle'
 
 export type Props = {
   logo: {
@@ -47,6 +48,7 @@ const DesktopNav: React.FC<Props> = ({ logo, links }) => {
             )}
           </Fragment>
         ))}
+        <ThemeToggler />
       </div>
     </nav>
   )

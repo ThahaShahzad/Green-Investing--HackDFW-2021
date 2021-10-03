@@ -24,9 +24,9 @@ const TopNav = () => {
 
       <HStack alignItems='center' spacing='4'>
         <ThemeToggler />
-        <Link to='/api/auth/logout'>
-          <Image src={Avatar} className='rounded-full' alt='male avatar' width='50' height='50' />
-        </Link>
+        {/* <Link to='/api/auth/logout'> */}
+        <Image src={Avatar} className='rounded-full' alt='male avatar' width='50' height='50' />
+        {/* </Link> */}
       </HStack>
     </Flex>
   )

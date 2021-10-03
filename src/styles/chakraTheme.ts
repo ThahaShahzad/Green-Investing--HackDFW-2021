@@ -119,7 +119,7 @@ const breakpoints = createBreakpoints({
 const overrides: ThemeOverride = {
   config: {
     initialColorMode: 'light',
-    useSystemColorMode: false
+    useSystemColorMode: true
   },
   fonts: {
     body: 'Roboto'

@@ -4,7 +4,7 @@ import ESGRatingCard from './ESGRatingCard'
 
 const Portfolio = () => {
   return (
-    <Box as='main' p='8' textAlign='center' overflow='scroll'>
+    <Box as='main' p='8' textAlign='center' overflow='auto'>
       <Heading size='lg' textAlign='left'>
         Account Summary
       </Heading>
