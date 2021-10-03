@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import CompanyComponent from 'components/dash/Search/Company'
+import NewsComponent from 'components/dash/Search/News'
 import DashLayout from 'components/dash/layout/layout'
 import { useRouter } from 'next/router'
 import { getEsgData } from 'components/getCompanyESG'
@@ -16,6 +17,7 @@ const Company = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <CompanyComponent company={company} />
+      <NewsComponent />
     </>
   )
 }
