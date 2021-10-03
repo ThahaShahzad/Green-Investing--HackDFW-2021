@@ -34,20 +34,20 @@ export const LandingPageDetails = {
       {
         imageSrc: AiOutlineStock,
         title: 'Invest',
-        description: 'Place your money where you belive it can have the best impact',
+        description: 'Build your wealth in areas you belive it can have the best impact',
         url: 'https://timerse.com'
       },
       {
         imageSrc: FaEnvira,
         title: 'Eco-Conscious',
         description:
-          'We believe you should be able to invest wisely and support companies that meet your environmental vision',
+          'Invest wisely and support companies that meet your environmental vision',
         url: 'https://google.com'
       },
       {
         imageSrc: AiFillDatabase,
         title: 'Data',
-        description: 'Up to date information on the top companies on the market',
+        description: 'Up to date information on the top companies in the market',
         url: 'https://reddit.com'
       }
     ],

@@ -3,6 +3,7 @@ import { Link } from 'components/custom'
 import { IoMdArrowBack } from 'react-icons/io'
 import Chart from 'react-google-charts'
 import { useMyColors } from 'styles/colors'
+import NewsComponent from 'components/dash/Search/News'
 
 interface props {
   company:
@@ -104,6 +105,7 @@ const Company = ({ company }: props) => {
           </Flex>
         </Box>
       </Box>
+      {/* <NewsComponent /> */}
     </Box>
   )
 }
