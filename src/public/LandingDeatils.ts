@@ -34,7 +34,7 @@ export const LandingPageDetails = {
       {
         imageSrc: AiOutlineStock,
         title: 'Invest',
-        description: 'Build your wealth in areas you belive it will have the best impact',
+        description: 'Build your wealth in areas you belive will have the best impact',
         url: 'https://timerse.com'
       },
       {
