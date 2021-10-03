@@ -22,7 +22,7 @@ export const LandingPageDetails = {
   },
   Hero: {
     heading: 'GreenInvesting',
-    description: 'Greenify your portfolio',
+    description: 'Greenify your investment portfolio',
     primaryButtonText: 'Learn more',
     primaryButtonUrl: '/about',
     watchVideoButtonText: 'Get Started',
@@ -40,8 +40,7 @@ export const LandingPageDetails = {
       {
         imageSrc: FaEnvira,
         title: 'Eco-Conscious',
-        description:
-          'Invest wisely and support companies that meet your environmental vision',
+        description: 'Invest wisely and support companies that meet your environmental vision',
         url: 'https://google.com'
       },
       {

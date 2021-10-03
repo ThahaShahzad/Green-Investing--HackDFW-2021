@@ -17,7 +17,7 @@ const ESGRatingCard = () => {
   ]
   return (
     <Box rounded='3xl' boxShadow='2xl' mt='10' p='4'>
-      <Flex ml='2' gridGap='8' align='center'>
+      <Flex ml='2' gridGap='0.5' align='center'>
         <Chart
           height={'100%'}
           chartType='PieChart'
@@ -53,7 +53,7 @@ const ESGRatingCard = () => {
             ))}
           </div>
         </Box>
-        <Box display='flex' gridGap='12' ml='40'>
+        <Box display='flex' gridGap='12' ml='auto'>
           <Box>
             <Text>Environment</Text>
             <Heading color='#10B981'>500</Heading>

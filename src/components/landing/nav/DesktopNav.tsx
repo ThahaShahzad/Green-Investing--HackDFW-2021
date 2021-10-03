@@ -18,7 +18,7 @@ export type Props = {
 
 const DesktopNav: React.FC<Props> = ({ logo, links }) => {
   const Styles = {
-    nav: 'hidden flex-1 justify-between items-center px-4 lg:flex',
+    nav: 'flex-1 justify-between items-center px-4 flex',
     logo: 'flex items-center ml-3',
     logoText: 'ml-8',
     navLinks: 'flex items-center gap-8',

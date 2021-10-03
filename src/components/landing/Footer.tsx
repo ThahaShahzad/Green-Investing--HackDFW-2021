@@ -55,7 +55,7 @@ const Footer: React.FC<Props> = ({ links, logo, socialLinks }) => {
               </a>
             ))}
           </div> */}
-          <p className={Styles.CopyrightText}>&copy; Copyright 2021, GreenInvesting Inc. All Rights Reserved.</p>
+          <p className={Styles.CopyrightText}>&copy; Copyright 2021, GreenInvesting Inc. No Rights Reserved.</p>
         </div>
       </div>
     </div>

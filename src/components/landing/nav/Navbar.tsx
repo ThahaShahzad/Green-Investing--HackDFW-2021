@@ -18,7 +18,7 @@ const Navbar: React.FC<Props> = (props) => {
   return (
     <header className='flex items-center justify-center max-w-screen-xl mx-auto pt-8 pb-10 md:pb-14'>
       <DesktopNav {...props} />
-      <MobileNav {...props} />
+      {/* <MobileNav {...props} /> */}
     </header>
   )
 }

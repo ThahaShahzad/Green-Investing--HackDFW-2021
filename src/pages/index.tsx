@@ -3,6 +3,7 @@ import Head from 'next/head'
 import LandingLayout from 'components/landing/layout'
 import { Features, Hero } from 'components/landing'
 import { LandingPageDetails } from 'public/LandingDeatils'
+import ESG from 'components/landing/ESG'
 
 const Landing = () => {
   return (
@@ -17,6 +18,7 @@ const Landing = () => {
       </Head>
       <Hero {...LandingPageDetails.Hero} />
       <Features {...LandingPageDetails.Features} />
+      <ESG />
     </>
   )
 }
